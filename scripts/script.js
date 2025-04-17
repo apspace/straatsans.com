@@ -21,13 +21,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         function animate() {
-            const weight = 135 + easedSin(t, 0.5) * 800;
+            const weight = 100 + easedSin(t, 1) * 800;
             const slant = 0 + easedSin(s, 1.5) * 12;
 
             text.style.fontVariationSettings = `'wght' ${Math.round(weight)}, 'slnt' ${slant.toFixed(1)}`;
             document.getElementById('debug-panel').innerHTML =
                 `Weight: ${Math.round(weight)}<br>Slant: ${Math.round(slant)}`;
-            t += 0.01;
+            t += 0.02;
             s += 0.015;
             requestAnimationFrame(animate);
         }
