@@ -107,3 +107,9 @@ footer a:hover {
         justify-content: center;
     }
 }
+
+@media (max-height: 600px) {
+    #main-text {
+        font-size: 16vw;
+    }
+}
